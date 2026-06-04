@@ -84,7 +84,7 @@ function renderRecipes(list){
 
             <button class="btn-favorite ${recipe.isFavorite ? 'active' : ''}"
             data-id="${recipe.id}">
-                â¤
+                🤍
             </button>
         </div>
         `;
