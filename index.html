@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>🍽 RecipeBook</h1>
+
+    <button id="hamburger" class="hamburger">
+        ☰
+    </button>
+
+    <nav id="nav" class="nav">
+        <a href="#">Home</a>
+        <a href="#">Favorites</a>
+        <a href="#">Shopping List</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Discover Delicious Recipes</h2>
+    <p>Search, save and manage your favorite meals.</p>
+</section>
+
+<section class="controls">
+    <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="Search recipes..."
+    >
+
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="dessert">Dessert</option>
+        <option value="snack">Snack</option>
+    </select>
+
+    <button id="openFormBtn" class="btn-primary">
+        + Add Recipe
+    </button>
+</section>
+
+<div id="recipeGrid" class="recipe-grid"></div>
+
+<!-- Modal -->
+<div id="modalOverlay" class="modal-overlay">
+    <div class="modal">
+        <button id="modalClose" class="modal-close">✕</button>
+
+        <h2>Add Recipe</h2>
+
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="recipeName">
+        </div>
+
+        <div class="form-group">
+            <label>Category</label>
+            <select id="recipeCategory">
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="dessert">Dessert</option>
+                <option value="snack">Snack</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Cuisine</label>
+            <input type="text" id="recipeCuisine">
+        </div>
+
+        <div class="form-group">
+            <label>Emoji</label>
+            <input type="text" id="recipeEmoji">
+        </div>
+
+        <div class="form-group">
+            <label>Ingredients (one per line)</label>
+            <textarea id="recipeIngredients"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Instructions</label>
+            <textarea id="recipeInstructions"></textarea>
+        </div>
+
+        <button id="saveRecipeBtn" class="btn-submit">
+            Save Recipe
+        </button>
+    </div>
+</div>
+
+<!-- Shopping Panel -->
+<div id="shoppingPanel" class="shopping-panel">
+    <h2>Shopping List</h2>
+
+    <div id="shoppingItems"></div>
+
+    <button id="closeShoppingPanel" class="btn-close-panel">
+        Close
+    </button>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
