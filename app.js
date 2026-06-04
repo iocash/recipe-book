@@ -161,7 +161,7 @@ saveRecipeBtn.addEventListener("click",()=>{
     document.getElementById("recipeCuisine").value;
 
     const emoji =
-    document.getElementById("recipeEmoji").value || "ðŸ½";
+    document.getElementById("recipeEmoji").value || "❤🤍";
 
     const ingredients =
     document.getElementById("recipeIngredients")
